@@ -6,11 +6,11 @@
       "src": "Derailed HP_alt.html",
       "use": "@vercel/static"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/Derailed HP_alt.html"
-    }
-  ]
+],
+"routes": [
+  {
+    "src": "/(.*)",
+    "dest": "/$1"
+  }
+]
 }
