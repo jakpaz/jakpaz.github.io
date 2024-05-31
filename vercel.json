@@ -3,14 +3,14 @@
   "public": true,
   "builds": [
     {
-      "src": "Derailedm HP_alt.html",
+      "src": "Derailed HP_alt.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/Derailedm HP_alt.html"
+      "dest": "/Derailed HP_alt.html"
     }
   ]
 }
