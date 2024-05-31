@@ -10,12 +10,12 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            background: url('Background_1.jpg') no-repeat center center fixed;
+            background: url('Background_3.jpg') no-repeat center center fixed;
             background-size: cover;
             font-family: Arial, sans-serif;
         }
         .logo {
-            position: absolute;
+            position: fixed;
             top: 10px;
             left: 10px;
             width: 15%;
@@ -24,7 +24,7 @@
             filter: brightness(0.3) contrast(1.2);
         }
         .nav-bar {
-            position: absolute;
+            position: fixed;
             top: 10px;
             right: 10px;
             display: flex;
@@ -34,9 +34,11 @@
         .nav-bar a {
             color: white;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.4em;
             cursor: pointer;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow to nav links */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            -webkit-text-stroke: 0.8px black; /* Thin black outline */
+            font-weight: bold;
         }
         .center-text {
             display: flex;
@@ -48,14 +50,16 @@
             color: white;
             font-size: 2em;
             padding: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow to center text */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            -webkit-text-stroke: 0.5px black; /* Thin black outline */
+            font-weight: bold;
         }
         .center-text p {
             margin: 10px 0;
         }
         @media (max-width: 768px) {
             .nav-bar {
-                position: static;
+                position: fixed;
                 margin-top: 20px;
                 justify-content: center;
             }
@@ -83,7 +87,7 @@
     <img src="Logo.png" alt="Logo" class="logo">
     <div class="nav-bar">
         <a onclick="showContent('content1')">Tickets</a>
-        <a onclick="showContent('content2')">Shuttle/Anreise</a>
+        <a onclick="showContent('content2')">Shuttles/Anreise</a>
         <a onclick="showContent('content3')">Camping</a>
         <a onclick="showContent('content4')">Line-Up</a>
         <a onclick="showContent('content5')">Über uns</a>
@@ -102,7 +106,7 @@
                     <p>Details about tickets go here.</p>
                 `,
                 content2: `
-                    <h2>Shuttle/Anreise</h2>
+                    <h2>Shuttles/Anreise</h2>
                     <p>Details about shuttle and travel go here.</p>
                 `,
                 content3: `
