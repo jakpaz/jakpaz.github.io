@@ -10,7 +10,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/$1"
+        "dest": "Derailed HP_alt.html"
       }
     ]
   }
