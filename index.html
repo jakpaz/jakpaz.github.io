@@ -17,7 +17,8 @@
         .nav-bar {
             position: fixed;
             top: 10px;
-            left: 10px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
@@ -32,9 +33,9 @@
             font-weight: bold;
         }
         .logo {
-            position: fixed;
-            top: 10px;
-            right: 10px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
             width: 15%;
             max-width: 150px;
             height: auto;
@@ -45,7 +46,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            height: calc(100% - 200px); /* Adjust height to account for nav-bar and logo */
+            margin-top: 20px; /* Margin to push text below the logo */
             text-align: center;
             color: white;
             font-size: 2em;
@@ -59,7 +61,6 @@
         }
         @media (max-width: 768px) {
             .nav-bar {
-                position: fixed;
                 margin-top: 20px;
                 justify-content: center;
             }
@@ -93,7 +94,7 @@
         <a onclick="showContent('content6')">Verplegung</a>
         <a onclick="showContent('content7')">Über uns</a>
     </div>
-    <img src="Logo.png" alt="Logo" class="logo">
+    <img src="Logo_1.png" alt="Logo" class="logo">
     <div class="center-text" id="content">
         Welcome to the Homepage of the Ignite Festival!
         <p>16. - 18.8.2024</p>
@@ -139,18 +140,12 @@
                 `,
                 content5: `
                     <h2>Bezahlsystem</h2>
-                    <p>Details about the line-up go here.</p>
+                    <p>Details about the payment system go here.</p>
                 `,
                 content6: `
                     <h2>Verpflegung</h2>
-                    <p>Details about the line-up go here.</p>
+                    <p>Details about the catering go here.</p>
                 `,
-
-
-
-
-
-
                 content7: `
                     <h2>Über uns</h2>
                     <p>Das Ignite Fest ist das interne, jährliche Vereinsfest des Derailed Forest e.V., welcher sich als kleiner Kultur- und Landschaftsverein um die Pflege 
