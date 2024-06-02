@@ -10,10 +10,19 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            background: url('Background_3.jpg') no-repeat center center fixed;
-            background-size: cover;
             font-family: Arial, sans-serif;
-            overflow-x: hidden;
+            overflow: hidden;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: url('Background_3.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
         }
         .nav-bar {
             position: fixed;
@@ -48,8 +57,6 @@
         .content-container {
             display: flex;
             flex-direction: column;
-
-            text-decoration-color: white; /* Change this to your desired color */
             justify-content: flex-start;
             align-items: center;
             height: 100%;
@@ -62,6 +69,7 @@
             -webkit-text-stroke: 0.5px black;
             font-weight: bold;
             z-index: 1;
+            overflow: auto;
         }
         .content-container p {
             margin: 10px 0;
@@ -104,7 +112,6 @@
     <div class="nav-bar">
         <a onclick="showContent('content1')">Tickets</a>
         <a onclick="showContent('content2')">Shuttles/Anreise</a>
-
         <a onclick="showContent('content4')">Line-Up</a>
         <a onclick="showContent('content5')">Bezahlsystem</a>
         <a onclick="showContent('content6')">Verpflegung</a>
@@ -132,7 +139,6 @@
                         erhältst dein Festivalbändchen an der Bar.</p>
                     <p>Die Teilnahme ist lediglich für Vereinsmitglieder und ihre Gäste gestattet, da es eine interne Veranstaltung ist. 
                         Es bleibt uns daher vorbehalten deine Zahlung zurückzusenden und die Teilnahme abzulehnen.</p> 
-
                 `,
                 content2: `
                     <h2>Shuttles/Anreise</h2>
@@ -149,19 +155,14 @@
                     <p>dera1led@gmx.de</p>
                     <img src="Camping.png" alt="Camping" style="max-width: 100%; height: auto; margin-top: 20px;">
                 `,
-
-                
                 content4: `
                     <h2>Line-Up</h2>
                     <p>Sylk (Trau-ma | Surge | SLK)</p>
                     <p><a href ="https://soundcloud.com/sylk-techno"> Soundclud </a></p>
-                    <p></p>
                     <p>Natanael Megersa (Bahnwärter Tiel | SEHR records)</p>
                     <p><a href ="https://soundcloud.com/natanaelmegersa"> Soundcloud </a></p>
-                    <p></p>
                     <p>Niob & Tantal (Derailed Kollektiv)</p>
                     <p><a href ="https://soundcloud.com/mesca-lito"> Soundcloud </a></p>
-                    <p></p>
                     <p>BT & Momo ()</p>
                     <p><a href ="https://soundcloud.com/natanaelmegersa"> Soundcloud </a></p>
                 `,
@@ -172,7 +173,7 @@
                     <p>Marken können vorab per Paypalüberweisung an dera1led@gmx.de unter Angabe des Namens und dem Stichwort „Wertmarke“ bezahlt werden. 
                         Ihr könnt eure Marken dann an der Bar abholen, wenn ihr ankommt.</p>
                     <p>Marken können auch vor Ort an der Bar erworben werden, ebenfalls per Paypalüberweisung.</p>
-                    <p> Alles basiert auf freiwilligen Spenden, welche über die Wertmarken entrichtet werden können.</p> 
+                    <p>Alles basiert auf freiwilligen Spenden, welche über die Wertmarken entrichtet werden können.</p> 
                 `,
                 content6: `
                     <h2>Verpflegung</h2>
@@ -185,7 +186,6 @@
                     <p>Samstagvormittag werden wir einen Kaffee-Service von einer Münchner Rösterei haben. 
                         Des Weiteren werden wir eine Crêpe-Station ab Samstagvormittag einheizen, an der ihr leckere Crepes snacken könnt.</p>
                     <p>Wir werden außerdem Früchte, Trinknahrung und Müsliriegel an der Bar frei zur Verfügung stellen. Auch Trinkwasser gibt es kostenlos an der Bar.</p>
-
                 `,
                 content7: `
                     <h2>Über uns</h2>
@@ -195,16 +195,13 @@
                         um diese mit anderen Menschen zu teilen.</p>
                     <p>Im Einklang mit der Natur verbringen wir zwei Nächte und einen Tag gemeinsam an diesem besonderen Ort, 
                         welcher mit viel Liebe von uns gepflegt und gestaltet wird.</p>
-                    <p> Das Ignite ist keine kommerzielle Veranstaltung und nicht öffentlich. 
-                        Lediglich Vereinsmitglieder und ihre Gäste können das Ignite besuchen</p>
-                    <p></p>
+                    <p>Das Ignite ist keine kommerzielle Veranstaltung und nicht öffentlich. 
+                        Lediglich Vereinsmitglieder und ihre Gäste können das Ignite besuchen.</p>
                     <p>Das Derailed Kollektiv ist ein Künstler:innen Kollektiv aus München und Umgebung und besteht seit 2020. Auf unseren nicht kommerziellen Veranstaltungen versuchen wir Raum für Kunst und Genuss zu schaffen. 
                         Dafür haben wir ein Netzwerk aus diversen Menschen geschaffen, die alle auf ihre eigene Weise zur Gemeinschaft 
-                        und ihrem höchsten Ziel beitragen
- schöne Musik und schöne Momente teilen.</p>
+                        und ihrem höchsten Ziel beitragen: schöne Musik und schöne Momente teilen.</p>
                     <p>Im Jahr 2024 haben wir den Derailed Forest e.V. gegründet, denn wir haben die wundervolle Möglichkeit bekommen, 
                         ein zauberhaftes Stück Natur mit unserer Kunst zu verbinden und gleichzeitig Raum für Inspiration und Entfaltung im Grünen zu schaffen.</p> 
-
                 `,
             };
 
