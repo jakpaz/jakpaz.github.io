@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Homepage</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background: url('Background_3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .nav-bar {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.4em;
+            cursor: pointer;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            -webkit-text-stroke: 0.8px black;
+            font-weight: bold;
+        }
+        .logo {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 15%;
+            max-width: 150px;
+            height: auto;
+            filter: brightness(0.3) contrast(1.2);
+        }
+        .center-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            padding: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            -webkit-text-stroke: 0.5px black;
+            font-weight: bold;
+        }
+        .center-text p {
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .nav-bar {
+                position: fixed;
+                margin-top: 20px;
+                justify-content: center;
+            }
+            .nav-bar a {
+                font-size: 1em;
+            }
+            .center-text {
+                font-size: 1.5em;
+            }
+        }
+        @media (max-width: 480px) {
+            .logo {
+                width: 20%;
+            }
+            .nav-bar a {
+                font-size: 0.9em;
+            }
+            .center-text {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a onclick="showContent('content1')">Tickets</a>
+        <a onclick="showContent('content2')">Shuttles/Anreise</a>
+        <a onclick="showContent('content3')">Camping</a>
+        <a onclick="showContent('content4')">Line-Up</a>
+        <a onclick="showContent('content5')">Über uns</a>
+    </div>
+    <img src="Logo.png" alt="Logo" class="logo">
+    <div class="center-text" id="content">
+        Welcome to the Homepage of the Ignite Festival!
+        <p>16. - 18.8.2024</p>
+        <p>Ranoldsberg</p>
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            const content = {
+                content1: `
+                    <h2>Tickets</h2>
+                    <p>Details about tickets go here.</p>
+                `,
+                content2: `
+                    <h2>Shuttles/Anreise</h2>
+                    <p>Details about shuttle and travel go here.</p>
+                `,
+                content3: `
+                    <h2>Camping</h2>
+                    <p>Details about camping go here.</p>
+                `,
+                content4: `
+                    <h2>Line-Up</h2>
+                    <p>Details about the line-up go here.</p>
+                `,
+                content5: `
+                    <h2>Über uns</h2>
+                    <p>Details about us go here.</p>
+                `,
+            };
+
+            document.getElementById('content').innerHTML = content[contentId];
+        }
+    </script>
+</body>
+</html>
