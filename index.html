@@ -11,7 +11,6 @@
             height: 100%;
             width: 100%;
             font-family: Arial, sans-serif;
-            overflow: hidden;
         }
         body::before {
             content: "";
@@ -59,7 +58,8 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            height: 100%;
+            height: auto;
+            min-height: 100vh;
             text-align: center;
             color: white;
             font-size: 1.6em;
@@ -69,7 +69,6 @@
             -webkit-text-stroke: 0.5px black;
             font-weight: bold;
             z-index: 1;
-            overflow: auto;
         }
         .content-container p {
             margin: 10px 0;
@@ -123,7 +122,7 @@
         <p>16. - 18.8.2024</p>
         <p>Ranoldsberg</p>
         <p>Derailed Kollektiv</p>
-        <p><a href ="https://www.instagram.com/derailed.kollektiv/"> Instagram </a></p>
+        <p><a href="https://www.instagram.com/derailed.kollektiv/"> Instagram </a></p>
     </div>
 
     <script>
@@ -142,7 +141,7 @@
                 `,
                 content2: `
                     <h2>Shuttles/Anreise</h2>
-                    <p>Das Grundstück liegt hier: <a href ="https://maps.app.goo.gl/y7nkrit9Yjrpu9Yc7"> Google Maps Location </a></p>
+                    <p>Das Grundstück liegt hier: <a href="https://maps.app.goo.gl/y7nkrit9Yjrpu9Yc7"> Google Maps Location </a></p>
                     <p>Du kannst mit dem Auto anreisen, größere Camper müssen jedoch bei einem der Vereinsvorstände angemeldet werden. 
                         Es gibt einen Campingplatz, an dem du mit deinem Zelt nächtigen kannst.</p>
                     <p>Wir bieten einen Shuttle Service vom Münchner Ostbahnhof an.</p>
@@ -158,13 +157,13 @@
                 content4: `
                     <h2>Line-Up</h2>
                     <p>Sylk (Trau-ma | Surge | SLK)</p>
-                    <p><a href ="https://soundcloud.com/sylk-techno"> Soundclud </a></p>
+                    <p><a href="https://soundcloud.com/sylk-techno"> Soundclud </a></p>
                     <p>Natanael Megersa (Bahnwärter Tiel | SEHR records)</p>
-                    <p><a href ="https://soundcloud.com/natanaelmegersa"> Soundcloud </a></p>
+                    <p><a href="https://soundcloud.com/natanaelmegersa"> Soundcloud </a></p>
                     <p>Niob & Tantal (Derailed Kollektiv)</p>
-                    <p><a href ="https://soundcloud.com/mesca-lito"> Soundcloud </a></p>
+                    <p><a href="https://soundcloud.com/mesca-lito"> Soundcloud </a></p>
                     <p>BT & Momo ()</p>
-                    <p><a href ="https://soundcloud.com/natanaelmegersa"> Soundcloud </a></p>
+                    <p><a href="https://soundcloud.com/natanaelmegersa"> Soundcloud </a></p>
                 `,
                 content5: `
                     <h2>Bezahlsystem</h2>
@@ -182,7 +181,9 @@
                          Dort steht jederzeit frisches Spülwasser und Seife zur Verfügung. 
                          Bringt auch gerne eure eigenen Becher von Zuhause mit!</p>
                     <p>Wir haben einen Grill auf dem Gelände, auf dem du deine selbstmitgebrachten Lebensmittel grillen kannst. 
-                        Denkt auch daran entsprechend Campingbesteck mitzunehmen.</p>
+                        Denkt auch daran entsprechend
+
+ Campingbesteck mitzunehmen.</p>
                     <p>Samstagvormittag werden wir einen Kaffee-Service von einer Münchner Rösterei haben. 
                         Des Weiteren werden wir eine Crêpe-Station ab Samstagvormittag einheizen, an der ihr leckere Crepes snacken könnt.</p>
                     <p>Wir werden außerdem Früchte, Trinknahrung und Müsliriegel an der Bar frei zur Verfügung stellen. Auch Trinkwasser gibt es kostenlos an der Bar.</p>
